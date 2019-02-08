@@ -3,15 +3,67 @@ A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
 B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
-function Sumar () 
+function Sumar () //tuve que cambiarle el nombre a las id porque empezaban con mayuscula y no me funcionaba
 {
+	//en la funcion de sumar habia una letra de mas que no permitia que se ejecute
+
+	var precio1;
+	var precio2;
+	var precio3;
+	var resultado;
+
+	precio1 = precioUno.value;
+	precio1 = parseInt(precio1);
+	precio2 = precioDos.value;
+	precio2 = parseInt(precio2);
+	precio3 = precioTres.value;
+	precio3 = parseInt(precio3);
+
+	resultado = precio1+precio2+precio3;
+
+	alert("La suma de los 3 artículos es " + resultado);
 	
 }
 function Promedio () 
 {
-	
+	var precio1;
+	var precio2;
+	var precio3;
+	var promedio;
+
+	precio1 = precioUno.value;
+	precio1 = parseInt(precio1);
+	precio2 = precioDos.value;
+	precio2 = parseInt(precio2);
+	precio3 = precioTres.value;
+	precio3 = parseInt(precio3);
+
+	promedio = (precio1 + precio2 + precio3) /3;
+
+	alert("El promedio de los precios de los artículos es " + promedio);
+
 }
 function PrecioFinal () 
 {
+	var precio1;
+	var precio2;
+	var precio3;
+	var suma;
+	var iva;
+	var precioFinal;
+
+	precio1 = precioUno.value;
+	precio1 = parseInt(precio1);
+	precio2 = precioDos.value;
+	precio2 = parseInt(precio2);
+	precio3 = precioTres.value;
+	precio3 = parseInt(precio3);
+
+	suma = precio1 + precio2 + precio3;
+	iva = suma * 21/100;
+	console.log("el iva es " + iva);
+	precioFinal = suma + iva;
+
+	alert("El precio por los 3 articulos es " + precioFinal);
 	
 }
