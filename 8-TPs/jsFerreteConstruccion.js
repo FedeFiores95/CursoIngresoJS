@@ -53,7 +53,7 @@ function Materiales ()
 	cementoTotal = perimetro * cemento;
 	calTotal	 = perimetro * cal;
 
-	alert("Se necesitan " + cemento + " bolsas de cemento y " + cal " bolsas de cal");
+	alert("Se necesitan " + cemento + " bolsas de cemento y " + cal + " bolsas de cal");
 
 
 }
