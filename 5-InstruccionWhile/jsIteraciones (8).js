@@ -1,7 +1,5 @@
 function mostrar()
 {
-
-	var contador=0;
 	var negativo=1;
 	var positivo=0;
 	var respuesta=true;
