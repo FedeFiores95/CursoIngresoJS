@@ -1,36 +1,40 @@
+/* Pedir dos números y mostrar el resultado: 
+Si son iguales los muestro concatenados. 
+Si el primero es mayor, los resto, 
+de lo contrario los sumo. 
+Si la suma es mayor a 10 ,además de mostrar el resultado, muestro el mensaje 
+"la suma es xxx y supero el 10". */
+
 function mostrar()
 {
-	var	sumaPrecios;
-	var cantidadProductos;
-	var descuentoCantidad;
-	var descuentoPrecio;
-	var metodoPago;
-	var precioFinal;
+	var	numeroUno;
+	var numeroDos;
+	var suma;
 
-	sumaPrecios = prompt("Ingrese el importe");
-	sumaPrecios = parseInt(sumaPrecios);
+	numeroUno = prompt("Ingrese el primero numero");
+	numeroUno = parseInt(numeroUno);
 
-	cantidadProductos = prompt("Ingrese la cantidad de productos comprados");
-	cantidadProductos = parseInt(cantidadProductos);
+	numeroDos = prompt("Ingrese el segundo numero");
+	numeroDos = parseInt(numeroDos);
 
-	if (cantidadProductos >2)
+	if (numeroUno == numeroDos)
 	 {
-	 	descuentoCantidad = sumaPrecios *10/100;
-	 	precioFinal = sumaPrecios - descuentoCantidad;
-
-		if (sumaPrecios >= 2000)
-		{
-		descuentoPrecio = precioFinal *15/100;
-		precioFinal = precioFinal - descuentoPrecio;
-		}
+	 	alert(numeroUno + " y " + numeroDos);
 	 }
-	metodoPago = prompt("Ingrese el metodo de pago");
-
-	if (metodoPago == "Tarjeta")
-	 {
-	 	recargoTarjeta = precioFinal *10/100;
-	 	precioFinal = precioFinal + recargoTarjeta;
-
-	 }
-	alert("El precio final a pagar es $" + precioFinal);
+	 else
+	 	{
+	 		if (numeroUno > numeroDos)
+	 		 {
+	 		 	alert(numeroUno - numeroDos);
+	 		 }
+	 		 else
+	 		 	{
+	 		 		suma = numeroUno + numeroDos;
+	 		 		alert(suma);
+	 		 			if (suma>10)
+	 		 			 {
+	 		 			 	alert("La suma es " + suma + " y supero al 10");
+	 		 			 }
+	 		 	}
+	 	}
 }
